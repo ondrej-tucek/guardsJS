@@ -17,7 +17,7 @@ where:
 ```js
 > import * as G from './guards';
 
-> const tenDividedBy = guard([notZero, isLess(4)], (x) => 10 / x);
+> const tenDividedBy = G.guard([G.notZero, G.isLess(4)], (x) => 10 / x);
 > tenDividedBy(2) // 5
 > tenDividedBy(0) // Error: The value is zero!
 > tenDividedBy(5) // Error: The value is less than 4!
